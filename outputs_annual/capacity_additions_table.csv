@@ -1,0 +1,159 @@
+year,Large PV,Large Battery,Dist PV,Dist Battery,Onshore Wind,Offshore Wind
+2020,"5.0
+(Aloha Solar)
+5.0
+(CBRE Phase 1)",,"15.3
+(DER forecast)","31.9 MW/127.8 MWh
+(DER forecast)",,
+2021,"3.5
+(Mauka FIT 1)",,"29.5
+(DER forecast)","13.0 MW/51.9 MWh
+(DER forecast)","24.0
+(Na Pua Makani)",
+2022,"139.5
+(RFP stage 1)","139.5 MW/558.0 MWh
+(RFP stage 1)","22.8
+(DER forecast)","9.7 MW/38.8 MWh
+(DER forecast)",,
+2023,"15.0
+(CBRE phase 2, small)
+114.6
+(RFP stage 2)","299.6 MW/1024.8 MWh
+(RFP stage 2)","19.2
+(DER forecast)","3.1 MW/12.5 MWh
+(DER forecast)",,
+2024,"5.0
+(CBRE phase 2, small)
+172.0
+(RFP stage 2)","172.0 MW/815.0 MWh
+(RFP stage 2)","23.1
+(DER forecast)","3.7 MW/14.9 MWh
+(DER forecast)",,
+2025,"150.0
+(CBRE phase 2)",,"24.3
+(DER forecast)","4.5 MW/18.2 MWh
+(DER forecast)",,
+2026,"159.4
+(Switch)","0.0 MW/328.6 MWh
+(Switch)","25.9
+(DER forecast)","5.3 MW/21.3 MWh
+(DER forecast)","40.0
+(Switch)",
+2027,"159.4
+(Switch)","0.0 MW/328.6 MWh
+(Switch)","27.2
+(DER forecast)","6.1 MW/24.5 MWh
+(DER forecast)","40.0
+(Switch)",
+2028,"159.4
+(Switch)","0.0 MW/328.6 MWh
+(Switch)","28.4
+(DER forecast)","6.7 MW/26.9 MWh
+(DER forecast)","40.0
+(Switch)",
+2029,"159.4
+(Switch)","0.0 MW/328.6 MWh
+(Switch)","29.7
+(DER forecast)","7.3 MW/29.3 MWh
+(DER forecast)","40.0
+(Switch)",
+2030,"159.4
+(Switch)","0.0 MW/328.6 MWh
+(Switch)
+150 MW/1800 MWh
+(Lake Wilson pumped hydro, Switch)","30.5
+(DER forecast)","7.9 MW/31.7 MWh
+(DER forecast)","40.0
+(Switch)",
+2031,"11.1
+(Switch)","0.0 MW/42.5 MWh
+(Switch)","31.3
+(DER forecast)","8.4 MW/33.4 MWh
+(DER forecast)",,
+2032,"11.1
+(Switch)","0.0 MW/42.5 MWh
+(Switch)","32.2
+(DER forecast)","8.7 MW/34.9 MWh
+(DER forecast)",,
+2033,"11.1
+(Switch)","0.0 MW/42.5 MWh
+(Switch)","32.4
+(DER forecast)","9.0 MW/36.0 MWh
+(DER forecast)",,
+2034,"11.1
+(Switch)","0.0 MW/42.5 MWh
+(Switch)","33.0
+(DER forecast)","9.3 MW/37.3 MWh
+(DER forecast)",,
+2035,"11.1
+(Switch)","0.0 MW/42.5 MWh
+(Switch)","33.2
+(DER forecast)","9.5 MW/38.0 MWh
+(DER forecast)",,
+2036,"43.7
+(Switch)","0.0 MW/58.0 MWh
+(Switch)","32.8
+(DER forecast)","9.6 MW/38.2 MWh
+(DER forecast)",,
+2037,"43.7
+(Switch)","0.0 MW/58.0 MWh
+(Switch)","33.2
+(DER forecast)","9.7 MW/38.8 MWh
+(DER forecast)",,
+2038,"43.7
+(Switch)","0.0 MW/58.0 MWh
+(Switch)","33.0
+(DER forecast)","9.8 MW/39.1 MWh
+(DER forecast)",,
+2039,"43.7
+(Switch)","0.0 MW/58.0 MWh
+(Switch)","33.1
+(DER forecast)","9.8 MW/39.3 MWh
+(DER forecast)",,
+2040,"43.7
+(Switch)","0.0 MW/58.0 MWh
+(Switch)","33.3
+(DER forecast)","9.9 MW/39.5 MWh
+(DER forecast)",,
+2041,"133.2
+(Switch)","10.8 MW/594.1 MWh
+(Switch)","33.5
+(DER forecast)","9.9 MW/39.8 MWh
+(DER forecast)",,
+2042,"133.2
+(Switch)","10.8 MW/594.1 MWh
+(Switch)","33.3
+(DER forecast)","10.1 MW/40.4 MWh
+(DER forecast)",,
+2043,"133.2
+(Switch)","10.8 MW/594.1 MWh
+(Switch)","34.1
+(DER forecast)","10.2 MW/41.0 MWh
+(DER forecast)",,
+2044,"133.2
+(Switch)","10.8 MW/594.1 MWh
+(Switch)","34.4
+(DER forecast)","10.4 MW/41.5 MWh
+(DER forecast)",,"100.0
+(Switch)"
+2045,"133.2
+(Switch)","10.8 MW/594.1 MWh
+(Switch)","35.0
+(DER forecast)","10.5 MW/41.9 MWh
+(DER forecast)",,"100.0
+(Switch)"
+2046,"2.6
+(Switch)",,,,,"299.7
+(Switch)"
+2047,"2.6
+(Switch)",,,,,"299.7
+(Switch)"
+2048,"2.6
+(Switch)",,,,,"299.7
+(Switch)"
+2049,"2.6
+(Switch)",,,,,"299.7
+(Switch)"
+2050,"2.6
+(Switch)",,,,,"299.7
+(Switch)"

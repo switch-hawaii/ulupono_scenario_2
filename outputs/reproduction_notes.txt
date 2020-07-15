@@ -1,0 +1,16 @@
+To reproduce this, you can use any version of Switch that was active from
+2020-06-04 12:52pm to 2020-06-10 19:39pm. 
+
+Alternatively, you can use any version that was active from 2020-06-10 19:39pm 
+to 2020-06-26 12:30pm (and maybe later), but change the federal tax credit for 
+DistPV in 2020-2021 back to 0.3 (in switch_model.hawaii.fed_subsidies).
+
+Both of these are with cplexamp 12.6.0.0 with 
+
+--solver-options-string="iisfind=1 mipgap=0.005 mipemphasis=1 mipbasis=1 nodefile=3 memoryemphasis=1 display=1 mipdisplay=2 threads=1 parallelmode=-1 numericalemphasis=1 basis_cond=1 timing=4 mipalg=2 primalopt='' crash=1 time=216000 feasibility=1e-5"
+
+The federal tax credit shouldn't affect the construction plan directly because
+DistPV is fixed in this model. But it may create a slightly different solution 
+path or it may affect the optimality gap (slightly higher cost due to the
+erroneous credit, so cplex doesn't search quite as far to get the optimality 
+gap down to 0.005).
