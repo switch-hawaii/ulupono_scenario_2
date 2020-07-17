@@ -20,14 +20,14 @@ about using the data or model or interpreting the results.
 
 Note: you can complete only the first step and skip the skip the remaining steps if you only want to inspect inputs or outputs for previously solved models. The later steps tell you how to install Switch and solve the model yourself.
 
-## Install Scenario 2 data
+## 1. Install Scenario 2 data
 
 Use a web browser to download the data from
 https://github.com/switch-hawaii/ulupono_scenario_2/archive/master.zip, then
 unzip it into a directory called ulupono_scenario_2. Place this wherever you
-find convenient.
+find convenient. (Alternatively, you can use `git` to clone from https://github.com/switch-hawaii/ulupono_scenario_2.git.)
 
-## Install Python, Switch and a solver
+## 2. Install Python, Switch and a solver
 
 The steps below are only needed if you want to modify and re-solve the model. If
 you would just like to inspect the source code for Switch, you can find the
@@ -35,9 +35,7 @@ version used for this study at
 https://github.com/switch-model/switch/tree/95c9d0f43b23a2972c7efe18a9c150c2e24bc302
 .
 
-[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a good, cross-platform installer. Alternatively, you can use the [standard Python installer](https://www.python.org/downloads/).
-
-You should install Python 3.7 or later. Earlier versions may work but have not been tested. Either of these should include the `pip` package manager for Python.
+Install Python 3.7 or later. Earlier versions may work but have not been tested. [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a good, cross-platform installer. Or you can use the [standard Python installer](https://www.python.org/downloads/). Either of these should include the `pip` package manager for Python.
 
 Next, launch a Terminal window or Anaconda prompt and then install the
 version of Switch used for this study, along with its dependencies, by typing
@@ -50,7 +48,7 @@ glpk or cbc are not fast enough for this model.
 
 Be sure to update the lines for `--solver` and `--solver-options-string` in ulupono_scenario_2/options.txt to match the solver you are using.
 
-# Solve the model
+# 3. Solve the model
 
 This step is only needed if you have modified the inputs. Otherwise, you can
 inspect the already-solved outputs as described in the next section.
@@ -58,20 +56,21 @@ inspect the already-solved outputs as described in the next section.
 You can solve the model as follows:
 
 - launch a Terminal window or Anaconda Command prompt
-- use the `cd` command to navigate to the directory the `ulupono_scenario_2`
-  directory
+- use the `cd` command to navigate to the `ulupono_scenario_2` directory
 - run this command: `switch solve`
   - this will solve the main optimization stage and write the results to the
     `outputs` directory
   - you can run `switch solve --help` to see more options.
 - run this command: `python interpolate_construction_plan.py`
   - this will move installation of batteries and utility-scale solar to earlier
-    years to smooth out the installation plan (the new plan is saved in `inputs_annual/*_modified.csv`)
-- run this command: `cat outputs/BuildPumpedHydroMW.csv` (Mac/Linux) or `type outputs/BuildPumpedHydroMW.csv`
+    years to smooth out the installation plan (the new plan is saved in
+    `inputs_annual/*_modified.csv`)
+- run this command: `cat outputs/BuildPumpedHydroMW.csv` (Mac/Linux) or
+  `type outputs/BuildPumpedHydroMW.csv` (Windows)
   - make note of the year when pumped hydro is built and the amount built
 - run this command: `switch solve --inputs-dir inputs_annual --outputs-dir outputs_annual --ph-mw 150 --ph-year 2030 --input-alias gen_build_predetermined.csv=gen_build_predetermined_adjusted.csv  generation_projects_info.csv=generation_projects_info_adjusted.csv --exclude-module switch_model.hawaii.heco_outlook_2020_06`
-  - be sure to update the `--ph-mw` and `--ph-year` to show the correct amount
-    and date; use `--ph-mw 0 --ph-year 2020` if no pumped hydro is built
+  - be sure to update the `--ph-mw` and `--ph-year` settings to show the correct   
+    amount and date; use `--ph-mw 0 --ph-year 2020` if no pumped hydro is built
   - this will save the annual results in `outputs_annual`
 
 Note that re-solving the model may produce different results from the ones shown
@@ -82,9 +81,15 @@ versions of the same solver, or even the same solver running with different
 flags or on different machines. However, all the solutions should be within 0.5%
 of each other in total cost.
 
-# Inspect results
+# 4. Inspect results
 
-All results from the main optimization stage (with investment decisions in 2020, 2023, 2025, 2030, 2035, 2040, 2045 and 2050) are in `outputs`. All results from the annual evaluation are in `outputs_annual`. The files with mixed capital and lowercase names (e.g., `BuildGen.csv`) are individual decisions made by the model. The files with lowercase names and underscores (e.g., `capacity_by_technology.csv`) are summary files. `total_cost.txt` shows the NPV of total costs in 2020-2054.
+All results from the main optimization stage (with investment decisions in 2020,
+2023, 2025, 2030, 2035, 2040, 2045 and 2050) are in `outputs`. All results from
+the annual evaluation are in `outputs_annual`. The files with mixed capital and
+lowercase names (e.g., `BuildGen.csv`) are individual decisions made by the
+model. The files with lowercase names and underscores (e.g.,
+`capacity_by_technology.csv`) are summary files. `total_cost.txt` shows the NPV
+of total costs in 2020-2054.
 
 Here are some useful tables:
 
