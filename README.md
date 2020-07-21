@@ -19,53 +19,54 @@ it to your computer.
 Please contact Matthias Fripp <mfripp@hawaii.edu> if you have any questions
 about using the data or model or interpreting the results.
 
-Note: you can complete only the first step and skip the skip the remaining steps
-if you only want to inspect inputs or outputs for previously solved models. The
-later steps tell you how to install Switch and solve the model yourself.
-
 # 1. Install or view Scenario 2 data
 
-Use a web browser to download the data from
-https://github.com/switch-hawaii/ulupono_scenario_2/archive/master.zip, then
-unzip it into a directory called ulupono_scenario_2. Place this wherever you
-find convenient. (Alternatively, you can use `git` to clone from
-https://github.com/switch-hawaii/ulupono_scenario_2.git.)
+Follow the steps below to install a copy of the Scenario 2 data on your computer
+(optional).
+
+- Download the data from
+  https://github.com/switch-hawaii/ulupono_scenario_2/archive/2020-06-04.zip
+  (178 MB).  
+- Unzip the downloaded file. This will produce a folder containing all the input
+  and output data for Scenario 2 (934 MB).  
+- Rename the folder if desired (e.g., "ulupono_scenario_2") and move it to a
+  convenient location.
+- As an alternative, if you are familiar with `git`, you can use it to retrieve
+  the data from https://github.com/switch-hawaii/ulupono_scenario_2.git. Then
+  checkout the `2020-06-04` tag.
 
 If you don't want to download the data, you can view it directly at
-https://github.com/switch-hawaii/ulupono_scenario_2/ instead.
+https://github.com/switch-hawaii/ulupono_scenario_2/tree/2020-06-04 instead.
 
 All the inputs to construct the scenario are in the `inputs` and `inputs_annual`
 directories. Configuration information is in `modules.txt` and `options.txt`.
 (See http://switch-model.org for more information on configuring and using
 Switch.) There is also some data embedded in the Switch modules used for this
 model (e.g., `tech_group_targets_definite` in
-`switch_model.hawaii.heco_outlook_2020_06`). The code used for this model can
-be viewed at
-https://github.com/switch-model/switch/tree/95c9d0f43b23a2972c7efe18a9c150c2e24bc302.
+`switch_model.hawaii.heco_outlook_2020_06`). See section 3 for instructions on
+how to view or install the version of Switch used for Scenario 2.
 
-The files in the `inputs` and `inputs_annual` directories show only the data
-used to run Switch. These were created by extracting the relevant data from the
-Switch-Hawaii data warehouse.
+The files in the `inputs` and `inputs_annual` directories show the data used to
+run Switch. These were created by extracting the relevant data from the
+Switch-Hawaii data warehouse using the `get_scenario_data.py` script in the
+`ulupono_scenario_2` directory. The data sources used to prepare these inputs
+are described in `Ulupono Scenario 2 Brief Documentation 2020-06-10.pdf`.
 
-All the source files and code used to build the data warehouse are published in
-the https://github.com/switch-hawaii/data repository. (The exact version used
-for Scenario 2 is at
+If you want to dive deeper, all the source files and code used to build the data
+warehouse are published in the https://github.com/switch-hawaii/data repository.
+(This is updated periodically; the version used for Scenario 2 is at
 https://github.com/switch-hawaii/data/tree/afd24baab03c33964bd0fbd358cbc1fd570c650c.)
-This includes spreadsheets with notes about the origin of data, GIS shapefiles
-and text files explaining the steps to take to download upstream data. Locations
-of most information should be fairly obvious, but some extra data (e.g., sales
-forecasts) is stored in 'PSIP 2016-12 ATB 2019 generator data.xlsx' in the
-`Generator Info` directory. The `import_data.py` script at
-https://github.com/switch-hawaii/data/build_database was used to import all
-these data to the data warehouse, and the `get_scenario_data.py` script in the
-`ulupono_scenario_2` directory was used to export the data form the data
-warehouse for use in Switch. So those are the definitive places to track the
-flow of data from source files to Scenario 2.
+The `switch-hawaii/data` repository includes spreadsheets with notes about the
+origin of data, GIS shapefiles and text files explaining the steps to take to
+download upstream data. Locations of most information should be fairly obvious,
+but some extra data (e.g., sales forecasts) are stored in 'PSIP 2016-12 ATB 2019
+generator data.xlsx' in the `Generator Info` directory.
 
 The Switch power system planning model was used to create an optimal plan for
 the power system based on the assumptions in the `inputs` and `inputs_annual`
-directories. This process is discussed in section 4 below, and the data
-describing the resulting plan are discussed in section 5.
+directories (and some built into the Switch model code). This process is
+discussed in section 4 below, and the data describing the resulting plan are
+discussed in section 5.
 
 # 2. Install Python and a solver
 
